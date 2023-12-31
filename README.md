@@ -31,6 +31,10 @@ The project consists of Python code that utilizes the NumPy library for numerica
 
   Visualizes the TSP route using Matplotlib.
 
+  **Visualize the best route**
+
+  visualize_route(best_route, cities)
+
 
 # How to Run
 
@@ -62,10 +66,6 @@ Run the script using python **filename.py**, replacing **filename.py** with the 
     # Print results
     print("Best route:", best_route)
     print("Total distance:", calculate_total_distance(best_route, distance_matrix))
-
-# Visualize the best route
-visualize_route(best_route, cities)
-
 
 # License
 
