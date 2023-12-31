@@ -44,6 +44,29 @@ Install the required libraries using
 
 Run the script using python **filename.py**, replacing **filename.py** with the actual name of your Python script.
 
+# Example parameters
+    num_cities = 10
+    num_routes = 50
+    num_generations = 500
+
+    # Randomly generate city coordinates and calculate the distance matrix
+    cities = np.random.rand(num_cities, 2)
+    distance_matrix = np.linalg.norm(cities[:, np.newaxis, :] - cities, axis=2)
+
+    # Generate an initial population of routes
+    population = generate_population(num_routes, num_cities)
+
+    # Evolve the population to find the best route
+    best_route = evolve(population, distance_matrix, num_generations)
+
+    # Print results
+    print("Best route:", best_route)
+    print("Total distance:", calculate_total_distance(best_route, distance_matrix))
+
+# Visualize the best route
+visualize_route(best_route, cities)
+
+
 # License
 
 This project is licensed under the **MIT License** - see the LICENSE file for details.
